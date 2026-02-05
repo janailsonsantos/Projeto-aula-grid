@@ -42,3 +42,18 @@ a:hover {
 h1, h2, h3 {
     font: inherit;
 }
+
+.container {
+    max-width: 1280px;
+    padding: 28px;
+    margin-inline: auto;
+    
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col { /* fluxo de coluna, deixa elementos que estão em linha para coluna*/
+    grid-auto-flow: column;
+}
