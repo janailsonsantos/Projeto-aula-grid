@@ -1,0 +1,7 @@
+#featured {
+    img{
+        height: 100%; /* para preencher os espaços dentro do grid que fica sobrando*/
+        object-fit: cover; /*ajustar para a imagem não ficar distorcida*/
+        border-radius: 4px;
+    }
+}

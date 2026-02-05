@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+}
+
+.grid-flow-col { /* fluxo de coluna, deixa elementos que estão em linha para coluna*/
+    grid-auto-flow: column;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gap-16 {
+    gap: 16px;
+}
