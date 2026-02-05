@@ -1,7 +1,34 @@
-#featured {
-    img{
-        height: 100%; /* para preencher os espaços dentro do grid que fica sobrando*/
-        object-fit: cover; /*ajustar para a imagem não ficar distorcida*/
-        border-radius: 4px;
+#featured img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* card */
+#featured .card {
+    position: relative; /*referência  para o before*/
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* pseudo-elemento */
+#featured .card::before { /*.card vira o elemento de referência, ::before é criado por cima da imagem*/
+    content: ""; /*so funciona se tiver o content*/
+    position: absolute; /*posiciona o ::before em relação ao pai*/
+    inset: 0; /*ocupa 100% do tamanho do elemento pai*/
+    top: 50%; /*top: 50% empurra o gradiente para começar no meio*/
+    background: linear-gradient( /*O linear-gradient cria um efeito de sombra escura embaixo*/
+        180deg,
+        transparent 0%,
+        #020617 100%
+    );
+}
+
+figcaption {
+    position:absolute;
+    bottom: 0;
+    padding: 24px;
+
+    h2 {
+        margin-top: 8px;
     }
 }
