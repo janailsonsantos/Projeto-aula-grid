@@ -51,12 +51,29 @@ img {
     max-width: 1280px;
     padding: 28px;
     margin-inline: auto;
+     
+    grid-template-areas: 
+    "featured featured"
+    "weekly weekly"
+    "ai aside";
     
 }
 
 main {
     margin-top: 40px;
-    gap: 80px;
+    display: grid; /* Faltava isso! */
+    gap: 32px; /* Reduzi um pouco para caber melhor na tela de 1280px */
+    
+    /* Conecta as seções com as áreas que você definiu no .container */
+    grid-template-areas: 
+        "featured featured"
+        "weekly weekly"
+        "ai aside";
+    
+    /* Define que a coluna da esquerda (ai) é maior que a da direita (aside) */
+    grid-template-columns: 1fr 384px;
+
+    
 }
 
 .content-tag {

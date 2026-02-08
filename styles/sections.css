@@ -15,6 +15,10 @@ section header {
     }
 }
 
+#featured {
+    grid-area: featured;
+}
+
 #featured img {
     height: 100%;
     object-fit: cover;
@@ -56,7 +60,8 @@ figcaption {
 
 
 #weekly {
-    header 
+    grid-area: weekly;
+    
     &>div{
         grid-template-columns: repeat(4, 292px);
     }
@@ -79,4 +84,47 @@ figcaption {
         }
     }
 
+}
+
+#ai {
+    grid-area: ai;
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+}
+
+#ai .grid {
+    /* Remove o grid-auto-flow: column se ele estiver vindo do HTML */
+    grid-auto-flow: row; 
+}
+
+#ai article {
+    display: grid;
+    grid-template-columns: 1fr 176px; /* Texto ocupa o resto, imagem fixa em 176px */
+    gap: 16px;
+}
+
+#more article {
+    display: grid;
+    grid-template-columns: 80px 1fr; /* Imagem pequena de 80px */
+    gap: 12px;
+    align-items: start;
+}
+
+#more article img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+#aside {
+    grid-area: aside;
 }
